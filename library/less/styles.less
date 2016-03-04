@@ -1,0 +1,50 @@
+//variables
+/*@theme-primary: #F05F40;//original orange*/
+@theme-dark: #222;
+
+/*@theme-primary: #CA7322; //orange*/
+@theme-shadows: #ff6f5c;//rojo shadows
+@theme-primary: #FF533C;//rojo mario
+@theme-primary: #cb2027;//rojo pinterest
+
+
+@theme-secondary: #A5560E;
+
+@navbar-background: #fff;
+
+//includes
+// Import the Bootstrap LESS here
+
+@import "../../bower_components/bootstrap/less/bootstrap.less";
+@import '../../bower_components/font-awesome/less/font-awesome.less';
+
+
+// Reset the icon font paths
+
+@fa-font-path: "../../../bower_components/font-awesome/fonts";
+@icon-font-path: "../../../bower_components/bootstrap/fonts/";
+
+
+
+/*@import "variables.less";*/
+@import "mixins.less";
+
+@import 'animate.min.less';
+@import 'base';
+@import 'navbar';
+@import 'sections';
+@import 'modals';
+@import 'socials';
+@import 'form';
+
+
+html{
+    opacity: 0;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+.mt-40{
+    margin-top: 40px;
+}

@@ -1,0 +1,74 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/*sm ≥ 768px Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
+
+/*debug*/
+
+/*default < 768px */
+body:before{
+    display: block;width: 150px;height: 12px;
+    background:#fff;
+    z-index: 9999999;
+    content: '<768px';
+    line-height:-2px;
+    padding: 2px;
+    font-size: 10px;
+    overflow: visible;
+    color:#111;
+    position:fixed;left: 80%;
+    bottom: 0;
+
+}
+
+/*default < 568px */
+body:after{
+    display: block;width: 250px;height: 12px;
+    background:#fff;
+    border-right: 80px solid greenyellow;
+    text-indent: -100px;
+    z-index: 9999999;
+    content: ' ';
+    line-height:-2px;
+    padding: 2px;
+    font-size: 10px;
+    overflow: visible;
+    color:#111;
+    position:fixed;left: 100%;
+    /*top: 0;*/
+    bottom: 0;
+
+}
+/*sm ≥ 768px */
+@media (min-width: 768px) {
+    body:before{
+        display: none;
+
+    }
+    body:after{
+        content: "SM ≥ 768px";
+        left: 568px;
+        text-indent:0;
+    }
+}
+/*md ≥ 992px */
+@media (min-width: 992px) {
+    body:after{
+        content: "MD ≥ 992px";
+        left: 668px;
+    }
+}
+/*lg ≥ 1200px*/
+@media (min-width: 1200px) {
+    body:after{
+        content: "LG ≥ 1200px";
+        left: 924px;
+    }
+}
