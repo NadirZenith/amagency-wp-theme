@@ -38,7 +38,6 @@
 
 <?php wp_footer(); // js scripts are inserted using this function ?>
 
-<!-- remove this for production -->
 <?php
 echo (WP_DEBUG) ? '<script src="//localhost:35729/livereload.js"></script>' : '';
 ?>

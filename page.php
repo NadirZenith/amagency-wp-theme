@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-<?php
-d('page');
-?>
 <div id="content" class="clearfix row">
 
     <div id="main" class="col-sm-8 clearfix" role="main">
