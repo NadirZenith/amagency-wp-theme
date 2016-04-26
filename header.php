@@ -38,52 +38,53 @@
     <body <?php body_class(); ?>>
 
         <!--<header role="banner">-->
-    
-            <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-                <!--<nav id="mainNav" class="navbar navbar-default navbar-fixed-top wow fadeInDown " data-wow-delay="0.1s" style="visibility:hidden">-->
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="navbar-brand" >
-                            <a class="page-scroll" href="#page-top">
-                                <!--<img src="src/img/logo.png"/>-->
-                                AM
-                            </a>
 
-                        </div>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <?php
-                            if (have_posts()) :
-                                while (have_posts()) : the_post();
-                                    global $post;
-                                    ?>
-                                    <li>
-                                        <a class="page-scroll" href="#<?php echo $post->post_name ?>"><?php the_title() ?></a>
-                                    </li>
-                                <?php endwhile; ?>	
-                                    <?php $page_footer_name = 'Contact'?>
-                                    <li>
-                                        <a class="page-scroll" href="#page-footer"><?php echo $page_footer_name ?></a>
-                                    </li>
-
-                            <?php endif; ?>
-                        </ul>
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+            <!--<nav id="mainNav" class="navbar navbar-default navbar-fixed-top wow fadeInDown " data-wow-delay="0.1s" style="visibility:hidden">-->
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand" >
+                        <a class="page-scroll" href="#page-top">
+                            <!--<img src="src/img/logo.png"/>-->
+                            <img class="logo-img" alt="AM Logo" src="<?php echo get_stylesheet_directory_uri(); ?>/library/img/am_pre.png" >
+                            <!--AM-->
+                        </a>
 
                     </div>
-                    <!-- /.navbar-collapse -->
                 </div>
-                <!-- /.container-fluid -->
-            </nav>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <?php
+                        if (have_posts()) :
+                            while (have_posts()) : the_post();
+                                global $post;
+                                ?>
+                                <li>
+                                    <a class="page-scroll" href="#<?php echo $post->post_name ?>"><?php the_title() ?></a>
+                                </li>
+                            <?php endwhile; ?>	
+                            <?php $page_footer_name = 'Contact' ?>
+                            <li>
+                                <a class="page-scroll" href="#page-footer"><?php echo $page_footer_name ?></a>
+                            </li>
+
+                        <?php endif; ?>
+                    </ul>
+
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
         <!--</header> end header -->
 
 
